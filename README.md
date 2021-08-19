@@ -1,37 +1,20 @@
-# Desafio do dia 01
+# Desafio do dia 02
 
-## Setup
+## Exercício 01 - Imutabilidade
 
-Primeiro, instale as dependências do projeto e coloque o servidor para rodar em modo de desenvolvimento.
+Importe o arquivo `src/immutable.js` no `src/main.js`. Abra o arquivo e olhe o console do navegador.
+O resultado dos dois objetos deveria ser diferente. Faça a criação do segundo objeto
+de forma imutável.
 
-Lembre-se de, após resolver cada exercício abaixo, fazer um commit para "registrar" o ajuste.
+## Exercício 02 - HOF (Higher Order Function)
+Abra o arquivo `src/calculator.js` e importe ele `src/main.js`.
 
-## Exercício 01
+Veja que, nesse arquivo, temos uma função `calculadora` sem implementação, e temos
+algumas variáveis que fazem a execução da calculadora. O desafio é fazer a implementação da
+calculadora, para que todos os valores no console resultem em `true`.
 
-Resolver o erro que aparece no console:
-
-```
-GET http://localhost:3000/main.js net::ERR_ABORTED 404 (Not Found)
-```
-
-## Exercício 02
-
-Ao resolver o primeiro erro, resolva o segundo erro que deverá aparecer no console:
-
-```
-Uncaught SyntaxError: Cannot use import statement outside a module
-```
-
-## Exercício 03
-
-Olhe novamente para o console, e resolva o próximo erro:
-
-```
-main.js:3 Uncaught TypeError: Cannot set property 'innerHTML' of null
-```
-
-## Exercício 04
-
-Crie um link no HTML (fora da div `.app`), e adicione à ele um evento de clique.
-O clique nesse botão deverá alternar a visibilidade do `.app`: se o `.app` estiver visível,
-ele deverá ser escondido. Se estiver escondido, o clique deve exibí-lo.
+A implementação deve ser da seguinte forma:
+- A função `calculadora` deve receber via argumento uma função, que dirá como o cálculo vai ser feito (olhe para a linha onde foi criada a variável `sum`, por exemplo, para ver a função que está sendo passada para a `calculadora`);
+- O retorno da função `calculadora` deve ser uma nova função que espera dois argumentos `a` e `b`: dois números que serão calculados usando a função que foi passada como argumento para `calculadora`; 
+- Essa função de retorno deve retornar **a chamada** da primeira função que foi passada via argumento; 
+- Os valores `a` e `b` devem ser passados como parâmetro para essa função que está sendo executada.
