@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 #app {
     font-family: Avenir, Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
@@ -5,4 +9,44 @@
     text-align: center;
     color: #2c3e50;
     margin-top: 60px;
+}
+
+[data-js="car"] {
+    width: 600px;
+    margin: 30px auto;
+    border: 1px solid #000;
+    padding: 5px;
+}
+
+[data-js="car"] input {
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+[data-js="car"] button {
+    background-color: #369;
+    border: none;
+    border-radius: 5px;
+    color: whitesmoke;
+    display: block;
+    margin: 20px auto;
+    padding: 5px 20px;
+    width: 70%;
+}
+
+table {
+    width: 600px;
+    margin: auto;
+    border: 1px solid #000;
+    border-radius: 4px;
+}
+
+thead th {
+    background-color: whitesmoke;
+    border-bottom: 1px solid #000;
+}
+
+tbody td {
+    text-align: center;
+    border-bottom: 1px solid #cdcdcd;
 }
