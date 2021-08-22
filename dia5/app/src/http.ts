@@ -1,4 +1,4 @@
-const request = (url: string, options: object) =>
+const request = (url: string, options?: object) =>
   fetch(url, options)
     .then(r => r.json())
     .catch(e => ({ error: true, message: e.message }))
